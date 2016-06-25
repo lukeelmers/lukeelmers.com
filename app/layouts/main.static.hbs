@@ -1,0 +1,19 @@
+---
+_options:
+    partials:
+        - app/partials/meta.static.hbs
+---
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        {{> meta}}
+
+        <link rel="stylesheet" href="DIGEST(/app.css)">
+    </head>
+
+    <body>
+        {{content}}
+        <script src="DIGEST(/app.js)"></script>
+
+    </body>
+</html>
