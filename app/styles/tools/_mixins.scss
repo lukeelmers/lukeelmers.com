@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+
+/**
+ * Media queries
+ * adapted from alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+ */
+
+/* Usage: @include bp(760px, min, height) { // styles here } */
+@mixin bp($point, $query1: min, $query2: width) {
+    @if ($media-queries) {
+        @media only screen and (#{$query1}-#{$query2}: $point / $base-font-size +em) {
+            @content;
+        }
+    }
+}
+
+/* Usage: @include orient { // styles here } */
+@mixin orient($orientation: landscape) {
+    @if ($media-queries) {
+        @media (orientation : $orientation) {
+            @content;
+        }
+    }
+}
+

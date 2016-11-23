@@ -24,7 +24,12 @@ module.exports = {
             manifest: ''
         },
         sass: {
-            mode: 'native'
+            mode: 'native',
+            options: {
+                includePaths: [
+                    'node_modules/susy/sass'
+                ]
+            }
         },
         static: {
             processors: [

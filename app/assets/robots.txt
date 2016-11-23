@@ -1,2 +1,9 @@
+# robots.txt for lukeelmers.com
+
 User-agent: *
-Disallow:
+Disallow: /whoisluke
+Disallow: /pictures
+Disallow: /resume
+Disallow: /thoughts
+Disallow: /portfolio/print
+Disallow: /portfolio/web

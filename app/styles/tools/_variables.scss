@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+
+
+/* Media queries
+   -------------------------------------------------------------------------- */
+
+/* Enable or disable media queries globally */
+$media-queries: 	true;
+
+/* Breakpoints */
+$bp-huge:   		1500px;
+$bp-large:    		1200px;
+$bp-medium:   		900px;
+$bp-small:    	    650px;
+$bp-tiny:   		300px;
+
+/* Maximum width of the main content */
+$page-max-width:    1600px;
+
+
+
+/* Fonts & Spacing
+   -------------------------------------------------------------------------- */
+$base-font-size-global: 16px;
+$base-font-family:	$sans-serif;
+$base-font-size: 	14px;
+
+
+$base-line-height:  $base-font-size * 1.5;
+$base-spacing-unit: $base-line-height;
+$half-spacing-unit:	$base-spacing-unit / 2;
+$quarter-spacing-unit: $half-spacing-unit / 2;
+$line-height-ratio:	$base-line-height / $base-font-size;
+
+
+
+/* Colors
+   -------------------------------------------------------------------------- */
+
+/* Design Colors */
+$white:				#fff;
+$black:             #333;
+$gray-light:        #bebebe;
+
+$body-text-color:	$black;
+$body-bg-color:		$white;
+
+$link-color:		$gray-light;
+$link-hover:		$black;

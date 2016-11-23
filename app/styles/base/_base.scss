@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+
+/* Global
+   -------------------------------------------------------------------------- */
+
+/**
+ * Border box 'slightly better best practice'
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+html {
+    color: $body-text-color;
+    background-color: $body-bg-color;
+
+    font-family: $base-font-family;
+    line-height: ($line-height-ratio) * 1em;
+    font-size: ($base-font-size / 16px) * 1em;
+
+	@include bp($bp-medium) {
+		font-size: (($base-font-size + 2) / 16px) * 1em;
+	}
+	@include bp($bp-huge) {
+        font-size: (($base-font-size + 3) / 16px) * 1em;
+	}
+}
+
+body {
+    /* Ensure Safari & Chrome render fonts consistently */
+    -webkit-font-smoothing: antialiased;
+    /**
+     * Provides more consistent font smoothing for Firefox 25+
+     * See https://bugzilla.mozilla.org/show_bug.cgi?id=857142
+     */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Defaults
+   -------------------------------------------------------------------------- */
+
+/**
+ * Set default margin-bottom & remove from individual items as needed.
+ * Makes it easier to maintain vertical rhythm.
+ */
+div, dl, dt, dd, ul, ol,
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+pre, form, fieldset, input, textarea,
+p, blockquote, th, td {
+    margin-bottom: $base-spacing-unit;
+}
+
+::-moz-selection {
+    background-color: $gray-light;
+    color: $white;
+}
+
+::selection {
+    background-color: $gray-light;
+    color: $white;
+}
+
+
+/* Links
+   -------------------------------------------------------------------------- */
+
+a, a:visited {
+    color: $link-color;
+    text-decoration: none;
+
+    /* on hover */
+    &:hover, &:focus {
+        color: $link-hover;
+        text-decoration: none;
+    }
+
+    /* on click */
+    &:active {
+
+    }
+
+    /* mobile tap color */
+    &:link {
+        /*
+        this highlights links on iPhones/iPads.
+        so it basically works like the :hover selector
+        for mobile devices.
+        */
+        -webkit-tap-highlight-color : rgba(0,0,0,0);
+    }
+}
+
+
+/* Headings
+   -------------------------------------------------------------------------- */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+h2, .h2 {}
+
+h3, .h3 {}
+
+h4, .h4 {}
+
+h5, .h5 {}
+
+h6, .h6 {}
+
+
+/* Elements
+   -------------------------------------------------------------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    padding: 0;
+    margin: $base-spacing-unit 0;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+address {
+    font-style: italic;
+    color: $gray-light;
+}
+
+blockquote {
+    border-left: 1px solid $black;
+    color: $gray-light;
+    padding-left: $quarter-spacing-unit;
+    @include bp($bp-medium) { padding-left: $base-spacing-unit; }
+}
+
+.header--logo {
+	max-width: 40px;
+	float: left;
+	margin: $quarter-spacing-unit;
+}
+
+.header--name {
+	float: left;
+	margin: $base-spacing-unit;
+}
+
