@@ -7,7 +7,7 @@
   "repository": "lukeelmers/lukeelmers.com",
   "scripts": {
     "start": "brunch watch --server",
-    "build-prod": "brunch build --production"
+    "build:prod": "rm -rf ./public && brunch build --production"
   },
   "dependencies": {
     "particles.js": "^2.0.0"
