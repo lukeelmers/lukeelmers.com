@@ -2,20 +2,20 @@ module.exports = {
 
   "particles": {
     "number": {
-      "value": 80,
+      "value": 200,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 700
       }
     },
     "color": {
-      "value": "#1e1e1e"
+      "value": "#ffffff"
     },
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0,
-        "color": "#000000"
+        "width": 1.2,
+        "color": "#ffffff"
       },
       "polygon": {
         "nb_sides": 5
@@ -27,12 +27,12 @@ module.exports = {
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.8,
       "random": false,
       "anim": {
         "enable": false,
         "speed": 1,
-        "opacity_min": 0.1,
+        "opacity_min": 0.3,
         "sync": false
       }
     },
@@ -48,14 +48,14 @@ module.exports = {
     },
     "line_linked": {
       "enable": true,
-      "distance": 205.17838682439088,
-      "color": "#2f2f2f",
-      "opacity": 0.29987610382026364,
+      "distance": 200,
+      "color": "#ffffff",
+      "opacity": 0.3,
       "width": 0
     },
     "move": {
       "enable": true,
-      "speed": 4,
+      "speed": 1.6,
       "direction": "none",
       "random": true,
       "straight": false,
@@ -76,7 +76,7 @@ module.exports = {
         "mode": "repulse"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true

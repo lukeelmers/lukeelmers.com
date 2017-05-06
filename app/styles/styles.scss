@@ -3,19 +3,15 @@
    ========================================================================== */
 
 // vendor & reset
-@import "vendor/normalize",
-        "tools/reset",
+@import "normalize",
         "susy";
 
 // tools
-@import "tools/typography",
-        "tools/variables",
-        "tools/mixins",
-        "tools/helpers",
-        "tools/grid";
+@import "typography",
+        "variables",
+        "mixins",
+        "helpers",
+        "grid";
 
 // base
-@import "base/base";
-
-// objects
-@import "objects/media";
+@import "base";
