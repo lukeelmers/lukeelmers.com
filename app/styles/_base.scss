@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+
+/* Global
+   -------------------------------------------------------------------------- */
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+html {
+    color: $body-text-color;
+    background-color: $body-bg-color;
+
+    font-family: $base-font-family;
+    line-height: ($line-height-ratio) * 1em;
+    font-size: ($base-font-size / 16px) * 1em;
+}
+
+/**
+ * Set default margin-bottom & remove from individual items as needed.
+ * Makes it easier to maintain vertical rhythm.
+ */
+div, dl, dt, dd, ul, ol,
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+pre, form, fieldset, input, textarea,
+p, blockquote, th, td {
+    margin: 0 0 $base-spacing-unit 0;
+}
+
+::-moz-selection {
+    background-color: $black;
+    color: $white;
+}
+
+::selection {
+    background-color: $black;
+    color: $white;
+}
+
+a, a:visited {
+    color: $link-color;
+    text-decoration: underline;
+
+    /* on hover */
+    &:hover, &:focus {
+        color: $link-hover;
+        text-decoration: none;
+    }
+
+    /* on click */
+    &:active {
+    }
+
+    /* mobile tap color */
+    &:link {
+        -webkit-tap-highlight-color : rgba(0,0,0,0);
+    }
+}
+
+h1, .h1 {
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+h2, .h2 {
+    font-family: $serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+h3, .h3 {
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: $quarter-spacing-unit;
+}
+
+h4, .h4 {
+    font-family: $serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+h5, .h5 {
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+h6, .h6 {}
+
+ul,
+ol {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 15px;
+}
+
+p {
+    font-size: 15px;
+}
+
+time {
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+
+/* Custom
+   -------------------------------------------------------------------------- */
+
+.wrapper {
+    @extend .cf;
+    padding: $base-spacing-unit;
+    margin-bottom: 0;
+}
+
+.content {
+    @extend .cf;
+    position: relative;
+    max-width: $page-max-width;
+}
+
+.header {
+    @extend .cf;
+    float: left;
+    background: $black;
+    width: $logo-width;
+    height: $logo-width;
+}
+
+.header--logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $logo-width;
+}
+
+.header--name {
+    clear: both;
+    padding: $base-spacing-unit*2 0 0;
+    margin-bottom: $quarter-spacing-unit;
+}
+
+.header--subtitle {
+    margin-bottom: $base-spacing-unit * 2;
+}
+
+.list--inline > li {
+    display: inline;
+    &:not(:last-of-type):after {
+        content: ', ';
+    }
+}

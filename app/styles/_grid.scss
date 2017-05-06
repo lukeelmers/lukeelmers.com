@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Grids (powered by Susy)
+   ========================================================================== */
+
+
+
+/* Susy grids global settings
+   -------------------------------------------------------------------------- */
+
+$susy: (
+    columns: 12,
+    gutters: 0.5,
+    global-box-sizing: border-box
+);
+
+@include border-box-sizing;
+
+.grid {
+    @include container($page-max-width);
+    section {
+        &:before {
+            content: '';
+            display: block;
+            height: 4px;
+            opacity: 0.7;
+            margin-bottom: $base-spacing-unit;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQYV2NkwAT/GdHE/jMwMDAiC4IFQIpggnABmCCKAEgQAABOBQUaykC8AAAAAElFTkSuQmCC);
+        }
+        padding: $half-spacing-unit 0;
+        @include span(100%);
+        @include bp($bp-small) {
+            @include span(6 of 12);
+        }
+        @include bp($bp-medium) {
+            @include span(3 of 12);
+        }
+        &:nth-of-type(2n) {
+            @include bp($bp-small) {
+                @include span(6 of 12 last);
+            }
+            @include bp($bp-medium) {
+                @include span(3 of 12);
+            }
+        }
+        &:nth-of-type(4n) {
+            @include bp($bp-medium) {
+                @include span(3 of 12 last);
+            }
+        }
+    }
+}
+

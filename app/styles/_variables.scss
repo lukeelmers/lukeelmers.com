@@ -13,26 +13,28 @@ $media-queries:     true;
 /* Breakpoints */
 $bp-huge:           1500px;
 $bp-large:          1200px;
-$bp-medium:         900px;
-$bp-small:              650px;
+$bp-medium:         1000px;
+$bp-small:          650px;
 $bp-tiny:           300px;
 
 /* Maximum width of the main content */
-$page-max-width:        1200px;
+$page-max-width:        1400px;
 
 
 
 /* Fonts & Spacing
    -------------------------------------------------------------------------- */
-$base-font-family:  $sans-serif;
+$base-font-family:  $serif;
 $base-font-size:    16px;
 
 
 $base-line-height:      $base-font-size * 1.5;
 $base-spacing-unit:     $base-line-height;
-$half-spacing-unit: $base-spacing-unit / 2;
+$half-spacing-unit:     $base-spacing-unit / 2;
 $quarter-spacing-unit:  $half-spacing-unit / 2;
-$line-height-ratio: $base-line-height / $base-font-size;
+$line-height-ratio:     $base-line-height / $base-font-size;
+
+$logo-width: 200px;
 
 
 
@@ -40,12 +42,12 @@ $line-height-ratio: $base-line-height / $base-font-size;
    -------------------------------------------------------------------------- */
 
 /* Design Colors */
-$white:             #fff;
+$white:                 #fcfcfc;
 $black:                 #333;
-$gray-light:            #bebebe;
+$gray-light:            #e1e1e1;
 
 $body-text-color:       $black;
 $body-bg-color:         $white;
 
-$link-color:            $gray-light;
+$link-color:            $black;
 $link-hover:            $black;
