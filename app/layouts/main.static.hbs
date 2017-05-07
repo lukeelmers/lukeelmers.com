@@ -1,7 +1,14 @@
 ---
+meta:
+    title: Luke Elmers | Software Engineer
+
+tracking:
+    ga_id: UA-6519046-1
+
 _options:
     partials:
         - app/partials/meta.static.hbs
+        - app/partials/tracking.static.hbs
 ---
 <!doctype html>
 <html class="no-js" lang="en">
@@ -14,6 +21,7 @@ _options:
     <body>
         {{content}}
         <script src="DIGEST(/app.js)"></script>
+        {{> tracking}}
 
     </body>
 </html>
