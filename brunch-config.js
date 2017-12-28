@@ -45,6 +45,9 @@ module.exports = {
     overrides: {
         production: {
             plugins: {
+                autoReload: {
+                    enabled: false
+                },
                 postcss: {
                     processors: [
                         require('autoprefixer'),
