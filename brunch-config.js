@@ -20,7 +20,7 @@ module.exports = {
             pattern: /DIGEST\(\/?([^\)]*)\)/g,
             referenceFiles: /\.(hbs|html|scss|js)$/,
             environments: ['production'],
-            prependHost: { production: 'https://www.lukeelmers.com/' },
+            prependHost: { production: 'https://lukeelmers.com/' },
             manifest: ''
         },
         sass: {
